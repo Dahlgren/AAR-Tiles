@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rmagick (2.15.4)
+    tileup (0.1.5)
+      rmagick (~> 2.15)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rmagick
+  tileup
+
+BUNDLED WITH
+   1.11.2
