@@ -1,0 +1,8 @@
+language: ruby
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y pngcheck
+
+script:
+  - sh verify_worlds.sh
