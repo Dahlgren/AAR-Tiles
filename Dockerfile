@@ -27,14 +27,14 @@ COPY worlds $APP_HOME/worlds
 # Generate tiles
 RUN ruby generate_tiles.rb
 
-# Remove build dependencies
-RUN apk del build-dependencies
-
 # Remove unwanted files
 RUN gem uninstall --all -x -I
 RUN rm Gemfile*
 RUN rm generate_tiles.rb
 RUN rm -r worlds
+
+# Remove build dependencies
+RUN apk del build-dependencies
 
 # Declare work directory as volume
 VOLUME $APP_HOME
