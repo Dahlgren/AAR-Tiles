@@ -1,8 +1,17 @@
 require 'fileutils'
+require 'parallel'
 require 'rmagick'
 require 'tileup'
 
-Dir["worlds/*.png"].each do |image_file|
+module TileUp
+  class ConsoleLogger < TileUpLogger
+    def create_logger
+      @logger = Logger.new('tileup.log')
+    end
+  end
+end
+
+Parallel.each(Dir["worlds/*.png"]) do |image_file|
   world = File.basename(image_file, '.*')
   output = 'tiles/' + world
 

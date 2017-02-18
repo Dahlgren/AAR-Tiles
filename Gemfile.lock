@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    parallel (1.10.0)
     rmagick (2.15.4)
     tileup (0.1.5)
       rmagick (~> 2.15)
@@ -9,6 +10,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  parallel
   rmagick
   tileup
 
